@@ -43,7 +43,7 @@ class TFAccelerometerEnv(py_environment.PyEnvironment):
         #self._action_spec = array_spec.BoundedArraySpec(
             #shape=(), dtype=np.int64, minimum=0, maximum=5, name='action')
         self._action_spec = array_spec.BoundedArraySpec(shape=(), dtype=np.int64, minimum=0, 
-            maximum=self._number_of_classes-1, name='action')
+            maximum=6, name='action')
         self._observation_spec = array_spec.BoundedArraySpec(
             shape=self._df.iloc[:, :-1].shape[1:], dtype=np.float64, minimum=-np.inf, maximum=np.inf, name='observation')
         self._data = self._df.iloc[:, :-1].values
